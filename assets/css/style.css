@@ -37,6 +37,7 @@ body{
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 1.5rem;
 }
 
 .right{
@@ -48,13 +49,82 @@ body{
 
 .userPersonal{
   height: 13%;
-  background-color: yellow;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.userPersonal img{
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.userPersonal i{
+  color: #B1B1B1;
+  font-size: 30px;
+  margin: 15px;
+}
+
+.userPersonal #userIcons{
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+<i class="fas fa-search"></i>
+<i class="fas fa-paperclip"></i>
+<i class="fas fa-microphone"></i>
+<i class="far fa-smile"></i> */
+
 
 .notification{
   height: 13%;
-  background-color: green;
+  background-color: #8EDAFC;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.notification i{
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 20px;
+  background-color: white;
+  color: #8EDAFC;
+}
+
+.notification div{
+  margin-right: 30px;
+}
+
+.notification div a{
+  font-size: 20px;
+  text-decoration: underline;
+  color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .chatList{
   height: 70%;
@@ -75,7 +145,6 @@ body{
   height: 13%;
   background-color: purple;
 }
-
 
 
 
