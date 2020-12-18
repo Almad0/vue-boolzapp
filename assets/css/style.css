@@ -5,9 +5,99 @@
 }
 
 body{
+  position: relative;
+}
 
+.green{
+  height: 18vh;
+  width: 100vw;
+  background-color: #009688;
+}
+
+.grey{
+  height: 82vh;
+  width: 100vw;
+  background-color: #DBDBD3;
 }
 
 .container {
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 85%;
+  background-color:
+  border: 1px solid red;
+  display: flex;
 }
+
+.left{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userPersonal{
+  height: 13%;
+  background-color: yellow;
+}
+
+.notification{
+  height: 13%;
+  background-color: green;
+}
+
+.chatList{
+  height: 70%;
+  background-color: red;
+}
+
+.userActive{
+  height: 13%;
+  background-color: yellow;
+}
+
+.chatBox{
+  height: 70%;
+  background-color: blue;
+}
+
+.chatInput{
+  height: 13%;
+  background-color: purple;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fine */
