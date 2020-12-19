@@ -5,7 +5,7 @@ let root = new Vue({
   data: {
     contacts: [{
         name: 'Michele',
-        avatar: '_1',
+        avatar: './assets/img/avatar_1.jpg',
         visible: true,
         messages: [{
             date: '10/01/2020 15:30:55',
@@ -26,8 +26,8 @@ let root = new Vue({
       },
       {
         name: 'Fabio',
-        avatar: '_2',
-        visible: true,
+        avatar: './assets/img/avatar_2.jpg',
+        visible: false,
         messages: [{
             date: '20/03/2020 16:30:00',
             text: 'Ciao come stai?',
@@ -47,8 +47,8 @@ let root = new Vue({
       },
       {
         name: 'Samuele',
-        avatar: '_3',
-        visible: true,
+        avatar: './assets/img/avatar_3.jpg',
+        visible: false,
         messages: [{
             date: '28/03/2020 10:10:40',
             text: 'La Marianna va in campagna',
@@ -68,8 +68,8 @@ let root = new Vue({
       },
       {
         name: 'Luisa',
-        avatar: '_4',
-        visible: true,
+        avatar: './assets/img/avatar_4.jpg',
+        visible: false,
         messages: [{
             date: '10/01/2020 15:30:55',
             text: 'Lo sai che ha aperto una nuova pizzeria?',
@@ -87,7 +87,13 @@ let root = new Vue({
   },
 
   methods: {
-
+    changeContacs: function(index){
+      for (let i = 0; i < this.contacts.length; i++) {
+        this.contacts[i].visible = false;
+      }
+      this.contacts[index].visible = true;
+      console.log(index);
+    }
   }
 
 });

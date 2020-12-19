@@ -77,8 +77,7 @@ body{
 }
 
 /*
-<i class="fas fa-search"></i>
-<i class="fas fa-paperclip"></i>
+
 <i class="fas fa-microphone"></i>
 <i class="far fa-smile"></i> */
 
@@ -113,28 +112,96 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .chatList{
   height: 70%;
-  background-color: red;
 }
+
+.chatList #searchBox{
+  height: 60px;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatList #searchBox input{
+  width: 90%;
+  line-height: 35px;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.chatList #userContacts ul{
+  list-style: none;
+}
+
+.chatList #userContacts ul li{
+
+}
+
+.chatList #userContacts ul li img{
+  vertical-align: -55px;
+  margin: 15px;
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+}
+
+.chatList #userContacts ul li span{
+}
+
+
+
+
+
 
 .userActive{
   height: 13%;
-  background-color: yellow;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+
+.userActive img{
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.userActive p{
+  display: inline-block;
+}
+
+.userActive i{
+  color: #B1B1B1;
+  font-size: 30px;
+  margin: 15px;
+}
+
+.userActive #userActiveIcons{
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .chatBox{
   height: 70%;

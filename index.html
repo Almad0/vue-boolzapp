@@ -32,10 +32,32 @@
             <a href="#">Attiva notifiche desktop</a>
           </div>
         </div>
-        <div class="chatList"></div>
+        <div class="chatList">
+          <div id="searchBox">
+            <input type="text" name="" value="">
+          </div>
+          <div id="userContacts">
+            <ul id="userContactList">
+              <li v-for="(contacts, index) in contacts" @click="changeContacs(index)">
+                <img :src="contacts.avatar" alt="">
+                <span class="contactName">{{contacts.name}}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="right">
-        <div class="userActive"></div>
+        <div class="userActive">
+          <div v-for="(contacts, index) in contacts" v-if="contacts.visible">
+            <img :src="contacts.avatar" alt="">
+            <p :class="contacts" class="contactName">{{contacts.name}}</p>
+          </div>
+          <div id="userActiveIcons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-paperclip"></i>
+            <i class="fas fa-ellipsis-v"></i>
+          </div>
+        </div>
         <div class="chatBox"></div>
         <div class="chatInput"></div>
       </div>
