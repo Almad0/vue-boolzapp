@@ -107,21 +107,26 @@ let root = new Vue({
         text: this.newMessage,
         status: 'sent'
       };
-      let nuovoRisposta = {
+      for (let i = 0; i < this.contacts.length; i++) {
+        if (this.contacts[i].visible == true) {
+          this.contacts[i].messages.push(nuovoInviato);
+          this.newMessage = ""
+          setTimeout(this.respondToMessage,1000);
+        }
+      }
+    },
+
+    respondToMessage: function(){
+      let nuovaRisposta = {
         date: dayjs(),
         text: "ok",
         status: 'received'
       };
       for (let i = 0; i < this.contacts.length; i++) {
         if (this.contacts[i].visible == true) {
-          this.contacts[i].messages.push(nuovoInviato);
-          this.newMessage = ""
-          setTimeout(function(){
-              this.contacts[i].messages.push(nuovoRisposta);
-          } ,1000);
+          this.contacts[i].messages.push(nuovaRisposta);
         }
       }
-
     },
 
   }

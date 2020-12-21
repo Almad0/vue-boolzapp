@@ -58,10 +58,11 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
+
         <div class="chatBox">
           <div  class="flexChat" v-for="(contacts, index) in contacts"
                 v-if="contacts.visible">
-                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}} <p class="dataMessaggio" v-for="(messaggi, index) in contacts.messages" >{{messaggi.date}}</p> </p>
+                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}} <p class="dataMessaggio" v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.date}}</p> </p>
 
 
           </div>
