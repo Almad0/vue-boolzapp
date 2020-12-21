@@ -86,6 +86,10 @@ let root = new Vue({
 
   },
 
+
+
+
+
   methods: {
     changeContacs: function(index){
       for (let i = 0; i < this.contacts.length; i++) {

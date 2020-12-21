@@ -59,13 +59,16 @@
           </div>
         </div>
         <div class="chatBox">
-          <div class="rightMessage" v-for="(contacts, index) in contacts" v-if="contacts.visible">
-            <p class="recivedMessage" v-for="(messaggi, index) in contacts.messages" v-if="messaggi.status=='sent'">{{messaggi.text}}</p>
+
+          <div  class="flexChat" v-for="(contacts, index) in contacts"
+                v-if="contacts.visible">
+                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}}</p>
           </div>
-          <div class="leftMessage" v-for="(contacts, index) in contacts" v-if="contacts.visible">
-            <p class="sentMessage" v-for="(messaggi, index) in contacts.messages" v-if="messaggi.status=='received'">{{messaggi.text}}</p>
-          </div>
+
+
         </div>
+
+
         <div class="chatInput"></div>
       </div>
     </div>
