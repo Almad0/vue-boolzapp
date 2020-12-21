@@ -38,9 +38,9 @@
           </div>
           <div id="userContacts">
             <ul id="userContactList">
-              <li v-for="(contacts, index) in contacts" @click="changeContacs(index)">
-                <img :src="contacts.avatar" alt="">
-                <span class="contactName">{{contacts.name}}</span>
+              <li class="" v-for="(contatti, index) in contacts" @click="changeContacs(index)">
+                <img :src="contatti.avatar" alt="">
+                <span class="contactName">{{contatti.name}}</span>
               </li>
             </ul>
           </div>
@@ -58,7 +58,14 @@
             <i class="fas fa-ellipsis-v"></i>
           </div>
         </div>
-        <div class="chatBox"></div>
+        <div class="chatBox">
+          <div class="rightMessage" v-for="(contacts, index) in contacts" v-if="contacts.visible">
+            <p class="recivedMessage" v-for="(messaggi, index) in contacts.messages" v-if="messaggi.status=='sent'">{{messaggi.text}}</p>
+          </div>
+          <div class="leftMessage" v-for="(contacts, index) in contacts" v-if="contacts.visible">
+            <p class="sentMessage" v-for="(messaggi, index) in contacts.messages" v-if="messaggi.status=='received'">{{messaggi.text}}</p>
+          </div>
+        </div>
         <div class="chatInput"></div>
       </div>
     </div>

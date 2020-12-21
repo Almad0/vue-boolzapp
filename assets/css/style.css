@@ -33,7 +33,7 @@ body{
 }
 
 .left{
-  width: 40%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -41,10 +41,11 @@ body{
 }
 
 .right{
-  width: 60%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 1.5rem;
 }
 
 .userPersonal{
@@ -114,6 +115,7 @@ body{
 
 .chatList{
   height: 70%;
+  background-color: white;
 }
 
 .chatList #searchBox{
@@ -133,10 +135,11 @@ body{
 
 .chatList #userContacts ul{
   list-style: none;
+
 }
 
-.chatList #userContacts ul li{
-
+.chatList #userContacts ul li:hover{
+  background-color: #E9EBEB;
 }
 
 .chatList #userContacts ul li img{
@@ -149,9 +152,6 @@ body{
 
 .chatList #userContacts ul li span{
 }
-
-
-
 
 
 
@@ -193,20 +193,51 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
 .chatBox{
   height: 70%;
-  background-color: blue;
+  background-image: url("../img/mine.jpg");
+  background-size: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: scroll;
 }
+
+
+.chatBox .recivedMessage{
+  background-color: #D5F9BA;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.chatBox .rightMessage{
+  align-self: flex-end;
+}
+
+.chatBox .sentMessage{
+  background-color: white;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .chatInput{
   height: 13%;
