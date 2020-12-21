@@ -59,22 +59,25 @@
           </div>
         </div>
         <div class="chatBox">
-
           <div  class="flexChat" v-for="(contacts, index) in contacts"
                 v-if="contacts.visible">
-                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}}</p>
+                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}} <p class="dataMessaggio" v-for="(messaggi, index) in contacts.messages" >{{messaggi.date}}</p> </p>
+
+
           </div>
-
-
         </div>
-
-
-        <div class="chatInput"></div>
+        <div class="chatInput">
+          <i class="far fa-smile"></i>
+          <input v-model="newMessage" @keyup.enter="addMessage" type="text" placeholder="Scrivi un messaggio" value="">
+          <i class="fas fa-microphone"></i>
+        </div>
       </div>
     </div>
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>dayjs().format()</script>
   <script src="./assets/js/main.js"></script>
 </body>
 

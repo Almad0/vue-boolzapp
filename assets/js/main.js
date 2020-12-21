@@ -82,7 +82,9 @@ let root = new Vue({
           }
         ],
       },
-    ]
+    ],
+
+    newMessage: "",
 
   },
 
@@ -97,9 +99,32 @@ let root = new Vue({
       }
       this.contacts[index].visible = true;
       console.log(index);
-    }
-  }
+    },
 
+    addMessage: function(){
+      let nuovoInviato = {
+        date: dayjs(),
+        text: this.newMessage,
+        status: 'sent'
+      };
+      let nuovoRisposta = {
+        date: dayjs(),
+        text: "ok",
+        status: 'received'
+      };
+      for (let i = 0; i < this.contacts.length; i++) {
+        if (this.contacts[i].visible == true) {
+          this.contacts[i].messages.push(nuovoInviato);
+          this.newMessage = ""
+          setTimeout(function(){
+              this.contacts[i].messages.push(nuovoRisposta);
+          } ,1000);
+        }
+      }
+
+    },
+
+  }
 });
 
 

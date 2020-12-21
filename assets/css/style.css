@@ -77,12 +77,6 @@ body{
   align-items: center;
 }
 
-/*
-
-<i class="fas fa-microphone"></i>
-<i class="far fa-smile"></i> */
-
-
 .notification{
   height: 13%;
   background-color: #8EDAFC;
@@ -199,7 +193,7 @@ body{
   background-size: auto;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .flexChat{
   display: flex;
@@ -224,17 +218,10 @@ body{
   border-radius: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.dataMessaggio{
+  color: red;
+  font-size: 1rem;
+}
 
 
 
@@ -245,9 +232,26 @@ body{
 
 .chatInput{
   height: 13%;
-  background-color: purple;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.chatInput i{
+  color:  #656F73;
+  font-size: 3rem;
+  margin: 0 10px;
+}
+
+.chatInput input{
+  width: 70%;
+  height: 70%;
+  padding: 20px;
+  border-radius: 5px;
+  border-style: none;
+  font-size:  1.5rem;
+}
 
 
 
