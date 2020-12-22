@@ -44,13 +44,16 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div>S
       </div>
       <div class="right">
         <div class="userActive">
           <div v-for="(contacts, index) in contacts" v-if="contacts.visible">
             <img :src="contacts.avatar" alt="">
-            <p :class="contacts" class="contactName">{{contacts.name}}</p>
+            <div class="blub">
+              <p :class="contacts" class="contactName">{{contacts.name}}</p>
+              <p class="lastDate">Ultimo contatto alle: </p>
+            </div>
           </div>
           <div id="userActiveIcons">
             <i class="fas fa-search"></i>
@@ -62,8 +65,7 @@
         <div class="chatBox">
           <div  class="flexChat" v-for="(contacts, index) in contacts"
                 v-if="contacts.visible">
-                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}} <p class="dataMessaggio" v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.date}}</p> </p>
-
+                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}} <span class="dataMessaggio">{{messaggi.date}}</span> </p>
 
           </div>
         </div>

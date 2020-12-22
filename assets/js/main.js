@@ -90,8 +90,6 @@ let root = new Vue({
 
 
 
-
-
   methods: {
     changeContacs: function(index){
       for (let i = 0; i < this.contacts.length; i++) {
@@ -103,7 +101,7 @@ let root = new Vue({
 
     addMessage: function(){
       let nuovoInviato = {
-        date: dayjs(),
+        date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
         text: this.newMessage,
         status: 'sent'
       };
@@ -118,7 +116,7 @@ let root = new Vue({
 
     respondToMessage: function(){
       let nuovaRisposta = {
-        date: dayjs(),
+        date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
         text: "ok",
         status: 'received'
       };
@@ -128,6 +126,16 @@ let root = new Vue({
         }
       }
     },
+
+    // lastMessage: function(){
+    //   let LastDate = ""
+    //   for (let i = 0; i < this.contacts.length; i++) {
+    //     if (this.contacts[i].visible == true) {
+    //       lastDate = this.contacts[i].messages.date;
+    //     }
+    //   console.log(lastDate);
+    //   }
+    // }
 
   }
 });
