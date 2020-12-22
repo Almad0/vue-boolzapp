@@ -105,8 +105,6 @@ body{
   color: gray;
 }
 
-
-
 .chatList{
   height: 70%;
   background-color: white;
@@ -125,6 +123,7 @@ body{
   line-height: 35px;
   font-size: 30px;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 .chatList #userContacts ul{
@@ -209,7 +208,7 @@ body{
 
 .chatBox .receivedMessage{
   align-self: flex-start;
-  min-width: 30%;
+  min-width: 20%;
   max-width: 45%;
   background-color: white;
   padding: 30px;
@@ -222,7 +221,7 @@ body{
   align-self: flex-end;
   align-items: flex-end;
   text-align: right;
-  min-width: 30%;
+  min-width: 20%;
   max-width: 45%;
   background-color: #D5F9BA;
   padding: 30px;

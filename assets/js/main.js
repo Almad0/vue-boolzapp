@@ -85,10 +85,8 @@ let root = new Vue({
     ],
 
     newMessage: "",
-
+    newSearch: ""
   },
-
-
 
   methods: {
     changeContacs: function(index){
@@ -127,6 +125,10 @@ let root = new Vue({
       }
     },
 
+    filteredItems: function(element){
+      return element.name.toLowerCase().includes(this.newSearch.toLowerCase())
+    }
+
     // lastMessage: function(){
     //   let LastDate = ""
     //   for (let i = 0; i < this.contacts.length; i++) {
@@ -137,6 +139,12 @@ let root = new Vue({
     //   }
     // }
 
+  },
+
+  computed: {
+    searchChat(){
+      return this.contacts.filter(this.filteredItems)
+    },
   }
 });
 
