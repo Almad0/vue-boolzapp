@@ -6,6 +6,7 @@
 
 body{
   position: relative;
+  overflow: hidden;
 }
 
 .green{
@@ -37,7 +38,7 @@ body{
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .right{
@@ -45,7 +46,7 @@ body{
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .userPersonal{
@@ -126,12 +127,19 @@ body{
   font-size: 1rem;
 }
 
+.chatList #userContacts{
+  height: 89%;
+  overflow-y: scroll;
+}
 .chatList #userContacts ul{
   list-style: none;
-
 }
 
 .chatList #userContacts ul li:hover{
+  background-color: #E9EBEB;
+}
+
+.chatList #userContacts ul li:visited{
   background-color: #E9EBEB;
 }
 
@@ -208,11 +216,13 @@ body{
 
 .chatBox .receivedMessage{
   align-self: flex-start;
-  min-width: 20%;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 30%;
   max-width: 45%;
   background-color: white;
-  padding: 30px;
-  margin: 10px 50px;
+  padding: 20px;
+  margin: 10px 30px;
   border-radius: 20px;
   position: relative;
 }
@@ -221,18 +231,18 @@ body{
   align-self: flex-end;
   align-items: flex-end;
   text-align: right;
-  min-width: 20%;
+  min-width: 30%;
   max-width: 45%;
   background-color: #D5F9BA;
-  padding: 30px;
-  margin: 10px 50px;
+  padding: 20px;
+  margin: 10px 30px;
   border-radius: 20px;
   position: relative;
 }
 
 .dataMessaggio{
   position: absolute;
-  bottom: 5px;
+  bottom: 0px;
   right: 20px;
   font-size: 1rem;
   color: #B1B1B1;

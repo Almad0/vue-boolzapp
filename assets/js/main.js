@@ -82,6 +82,59 @@ let root = new Vue({
           }
         ],
       },
+      {
+          name: 'Anna',
+          avatar: './assets/img/avatar_5.jpg',
+          visible: false,
+          messages: [{
+              date: '10/01/2020 15:50:00',
+              text: 'La coperta grigia mi piace un sacco!',
+              status: 'received'
+            },
+            {
+              date: '10/01/2020 16:15:22',
+              text: 'Tanto è mia, non ci provare',
+              status: 'sent'
+            }
+          ],
+        },
+        {
+            name: 'Tommaso',
+            avatar: './assets/img/avatar_6.jpg',
+            visible: false,
+            messages: [{
+                date: '10/01/2020 09:30:55',
+                text: 'No vabbè, non ce la posso fare',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 09:50:00',
+                text: 'Non ho voglia di farlo :(',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 10:15:22',
+                text: 'Nemmeno io, pero daje',
+                status: 'received'
+              }
+            ],
+          },
+          {
+              name: 'Carlo',
+              avatar: './assets/img/avatar_7.jpg',
+              visible: false,
+              messages: [{
+                  date: '10/01/2020 16:33:55',
+                  text: 'Domani ci vediamo?',
+                  status: 'sent'
+                },
+                {
+                  date: '10/01/2020 17:18:22',
+                  text: 'Volentieri',
+                  status: 'received'
+                }
+              ],
+            },
     ],
 
     newMessage: "",
