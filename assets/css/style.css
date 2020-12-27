@@ -138,10 +138,10 @@ body{
 .chatList #userContacts ul li:hover{
   background-color: #E9EBEB;
 }
-
-.chatList #userContacts ul li:visited{
+.activeSelection{
   background-color: #E9EBEB;
 }
+
 
 .chatList #userContacts ul li img{
   vertical-align: -55px;
@@ -150,11 +150,6 @@ body{
   border-radius: 50%;
   border: 1px solid lightgrey;
 }
-
-.chatList #userContacts ul li span{
-}
-
-
 
 .userActive{
   height: 13%;
@@ -169,7 +164,7 @@ body{
   align-items: center;
 }
 
-.blub{
+.contactWrapper{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -214,30 +209,29 @@ body{
   flex-direction: column;
 }
 
-.chatBox .receivedMessage{
-  align-self: flex-start;
-  align-items: flex-start;
-  text-align: left;
+
+.chatBox .message{
   min-width: 30%;
   max-width: 45%;
-  background-color: white;
   padding: 20px;
   margin: 10px 30px;
   border-radius: 20px;
   position: relative;
 }
 
-.chatBox .sentMessage{
+
+.chatBox .received{
+  align-self: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  background-color: white;
+}
+
+.chatBox .sent{
   align-self: flex-end;
   align-items: flex-end;
   text-align: right;
-  min-width: 30%;
-  max-width: 45%;
   background-color: #D5F9BA;
-  padding: 20px;
-  margin: 10px 30px;
-  border-radius: 20px;
-  position: relative;
 }
 
 .dataMessaggio{

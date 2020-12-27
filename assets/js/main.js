@@ -147,6 +147,9 @@ let root = new Vue({
         this.contacts[i].visible = false;
       }
       this.contacts[index].visible = true;
+      let select = document.getElementByclass
+
+
       console.log(index);
     },
 

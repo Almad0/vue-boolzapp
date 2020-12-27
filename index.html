@@ -38,7 +38,7 @@
           </div>
           <div id="userContacts">
             <ul id="userContactList">
-              <li class="" v-for="(contatti, index) in searchChat" @click="changeContacs(index)">
+              <li v-for="(contatti, index) in searchChat" @click="changeContacs(index)">
                 <img :src="contatti.avatar" alt="">
                 <span class="contactName">{{contatti.name}}</span>
               </li>
@@ -50,7 +50,7 @@
         <div class="userActive">
           <div v-for="(contacts, index) in contacts" v-if="contacts.visible">
             <img :src="contacts.avatar" alt="">
-            <div class="blub">
+            <div class="contactWrapper">
               <p :class="contacts" class="contactName">{{contacts.name}}</p>
               <p class="lastDate">Ultimo contatto alle: </p>
             </div>
@@ -65,7 +65,7 @@
         <div class="chatBox">
           <div  class="flexChat" v-for="(contacts, index) in contacts"
                 v-if="contacts.visible">
-                  <p  v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'receivedMessage' : 'sentMessage'">{{messaggi.text}} <span class="dataMessaggio">{{messaggi.date}}</span> </p>
+                  <p  class="message" v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'received' : 'sent'">{{messaggi.text}} <span class="dataMessaggio">{{messaggi.date}}</span> </p>
           </div>
         </div>
         <div class="chatInput">
