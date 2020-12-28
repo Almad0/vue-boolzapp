@@ -65,7 +65,17 @@
         <div class="chatBox">
           <div  class="flexChat" v-for="(contacts, index) in contacts"
                 v-if="contacts.visible">
-                  <p  class="message" v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'received' : 'sent'">{{messaggi.text}} <span class="dataMessaggio">{{messaggi.date}}</span> </p>
+                  <p  class="message" v-for="(messaggi, index) in contacts.messages" :class="messaggi.status=='received' ? 'received' : 'sent'">{{messaggi.text}}
+                    <i class="fas fa-chevron-down"></i>
+                    <span class="dataMessaggio">{{messaggi.date}}</span>
+                    <!-- <div class="messageOption">
+                      <ul>
+                        <li>Info</li>
+                        <li>Cancella</li>
+                      </ul>
+                    </div> -->
+                  </p>
+
           </div>
         </div>
         <div class="chatInput">

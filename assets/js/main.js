@@ -183,17 +183,17 @@ let root = new Vue({
 
     filteredItems: function(element){
       return element.name.toLowerCase().includes(this.newSearch.toLowerCase())
-    }
+    },
 
-    // lastMessage: function(){
-    //   let LastDate = ""
-    //   for (let i = 0; i < this.contacts.length; i++) {
-    //     if (this.contacts[i].visible == true) {
-    //       lastDate = this.contacts[i].messages.date;
-    //     }
-    //   console.log(lastDate);
-    //   }
-    // }
+    lastMessage: function(){
+      let lastDate = ""
+      for (let i = 0; i < this.contacts.length; i++) {
+        if (this.contacts[i].visible == true) {
+          lastDate = this.contacts[i].messages.date;
+        }
+      }
+      console.log(lastdate);
+    }
 
   },
 
