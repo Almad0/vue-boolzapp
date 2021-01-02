@@ -38,7 +38,7 @@
           </div>
           <div id="userContacts">
             <ul id="userContactList">
-              <li v-for="(contatti, index) in searchChat" @click="changeContacs(index)">
+              <li v-for="(contatti, index) in searchChat" @click="changeContacs(index),  lastMessage(index)">
                 <img :src="contatti.avatar" alt="">
                 <span class="contactName">{{contatti.name}}</span>
               </li>

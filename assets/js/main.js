@@ -148,14 +148,11 @@ let root = new Vue({
       }
       this.contacts[index].visible = true;
       let select = document.getElementByclass
-
-
-      console.log(index);
     },
 
     addMessage: function(){
       let nuovoInviato = {
-        date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         text: this.newMessage,
         status: 'sent'
       };
@@ -170,7 +167,7 @@ let root = new Vue({
 
     respondToMessage: function(){
       let nuovaRisposta = {
-        date: dayjs().format('DD/MM/YYYY hh:mm:ss'),
+        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
         text: "ok",
         status: 'received'
       };
@@ -185,15 +182,13 @@ let root = new Vue({
       return element.name.toLowerCase().includes(this.newSearch.toLowerCase())
     },
 
-    lastMessage: function(){
-      let lastDate = ""
-      for (let i = 0; i < this.contacts.length; i++) {
-        if (this.contacts[i].visible == true) {
-          lastDate = this.contacts[i].messages.date;
-        }
+    lastMessage: function(index){
+      let last;
+      for (let i = 0; i < this.contacts[index].messages.length; i++) {
+        last = this.contacts[index].messages[i].date
       }
-      console.log(lastdate);
-    }
+      console.log(last);
+    },
 
   },
 
