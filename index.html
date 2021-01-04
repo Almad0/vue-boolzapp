@@ -39,8 +39,9 @@
           <div id="userContacts">
             <ul id="userContactList">
               <li v-for="(contatti, index) in searchChat" @click="changeContacs(index),  lastMessage(index)">
-                <img :src="contatti.avatar" alt="">
-                <span class="contactName">{{contatti.name}}</span>
+                  <img :src="contatti.avatar" alt="">
+                  <span class="contactName">{{contatti.name}}</span>
+                  <span class= "contactLastDate"> {{lastMessage(index)}}</span>
               </li>
             </ul>
           </div>
@@ -52,7 +53,7 @@
             <img :src="contacts.avatar" alt="">
             <div class="contactWrapper">
               <p :class="contacts" class="contactName">{{contacts.name}}</p>
-              <p class="lastDate">Ultimo contatto alle: </p>
+              <p class="lastDate">Ultimo contatto: {{lastMessage(index)}}</p>
             </div>
           </div>
           <div id="userActiveIcons">

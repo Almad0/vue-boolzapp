@@ -133,11 +133,30 @@ body{
 }
 .chatList #userContacts ul{
   list-style: none;
+  overflow-x: auto;
+}
+
+.chatList #userContacts ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatList #userContacts ul li span{
+  text-align: right;
+}
+.chatList #userContacts ul li .contactName{
+  margin-right: 20px;
+}
+.chatList #userContacts ul li .contactLastDate{
+  margin: 15px;
 }
 
 .chatList #userContacts ul li:hover{
   background-color: #E9EBEB;
 }
+
+
 .activeSelection{
   background-color: #E9EBEB;
 }
@@ -149,6 +168,13 @@ body{
   width: 70px;
   border-radius: 50%;
   border: 1px solid lightgrey;
+}
+
+
+#userContacts .contactLastDate{
+  margin-left: 100px;
+  color: #B1B1B1;
+  text-align: left;
 }
 
 .userActive{

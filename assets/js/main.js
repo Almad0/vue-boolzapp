@@ -188,6 +188,7 @@ let root = new Vue({
         last = this.contacts[index].messages[i].date
       }
       console.log(last);
+      return last;
     },
 
   },
